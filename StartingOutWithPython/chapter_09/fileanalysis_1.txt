@@ -1,0 +1,5 @@
+Lately though, what’s been really fun to see is those out-of-the-box and creative papers! With this fairly recent rush of 
+deep learning in computer vision, we’re still discovering all the possibilities. Many papers will present totally 
+new applications of deep networks in vision. They may not be the most fundamentally ground-breaking works, but they’re fun 
+to see and offer a creative and enlightening perspective to the field, often sparking new ideas from the new angle they present. 
+All in all, they’re pretty cool!

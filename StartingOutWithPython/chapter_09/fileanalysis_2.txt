@@ -1,0 +1,3 @@
+It’s quick and easy to use because you don’t need exact pairs of images, and you end up with a “generic” image enhancer 
+at the end. I also like that it’s a weakly supervised approach. Unsupervised learning seems quite far away. But for many 
+sub-domains in computer vision, weak supervision seems like a promising and profitable direction.
