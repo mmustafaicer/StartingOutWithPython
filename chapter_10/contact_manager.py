@@ -1,7 +1,6 @@
 # this program manages contacts.
 import contact
 import pickle
-from lib2to3.tests.data.infinite_recursion import FILE
 
 # global constants for menu choices.
 LOOK_UP=1
