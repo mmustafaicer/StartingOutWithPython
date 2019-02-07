@@ -4,10 +4,15 @@ def main():
     # ask user to enter a number to check
     user_number=int(input("Please enter a number to check if it is prime or not: "))
     print()
-    if is_prime(user_number):
-        print("Your number", user_number, "is a prime number.")
-    else:
-        print("Your number", user_number, "is NOT a prime number.")
+    
+    # if user enters 1 it is not prime
+    if user_number == 1:
+        print("1 is not a prime number.")
+    else:   
+        if is_prime(user_number):
+            print("Your number", user_number, "is a prime number.")
+        else:
+            print("Your number", user_number, "is NOT a prime number.")
     
 def is_prime(user_number):
     # we create a for loop structure so we can divide our number
