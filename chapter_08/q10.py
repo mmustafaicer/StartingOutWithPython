@@ -3,22 +3,21 @@
 def main():
     user_string=input("Enter a string: ")
     
-    # create an empty list space for characters and
-    # occurences list with same shared-index.
+    # create an empty list to store each character and
+    # occurences list to store how many time it is repeated 
+    # with same shared-index.
     char_list=[]
     occurences=[]
-    
-    # initialize index
-    
+   
     # read every character in the string
     for ch in user_string.lower():
         # first make sure it is not whitespace or any other character than alphabet and number
         # simply use isalnum() for alphabetical and numerical characters.
         if ch.isalnum():
-            # if it is not in the list append it
+            # if it is not in the list append it to char_list
             if ch not in char_list:
                 char_list.append(ch)
-                # and increase occurence for it
+                # and place its first occurence
                 occurences.append(1)
             
             # if it is ON THE LIST
