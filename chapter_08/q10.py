@@ -3,30 +3,38 @@
 def main():
     user_string=input("Enter a string: ")
     
-    # create a space for most frequent char and
-    # accumulator for it.
-    mFreqChar=[]
-    occurence=0
+    # create an empty list space for characters and
+    # occurences list with same shared-index.
+    char_list=[]
+    occurences=[]
     
     # initialize index
-    index=0
     
     # read every character in the string
-    for ch in user_string:
-        # initialize character counter for 1st, 2nd, 3rd... and elements.
-        occu=0
-        while index<len(user_string):    
-            if ch.lower()==user_string[index].lower():      # compare if repeats again
-                occu+=1
-                index+=1
-            # if new count is greater than previous count change our display variables
-            else:
-                index+=1
-            if occu>occurence:
-                occurence=occu
-                mFreqChar=ch    
+    for ch in user_string.lower():
+        # if it is not in the list append it
+        if ch not in char_list:
+            char_list.append(ch)
+            # and increase occurence for it
+            occurences.append(1)
+        
+        # if it is ON THE LIST
+        elif ch in char_list:
             
-    print("The most frequently occuring letter is", mFreqChar, "with", occurence, "occurences.")
+            # find its index
+            index = char_list.index(ch)
+            
+            # increase its occurence by 1
+            occurences[index]+=1
+            
+    # Now determine the winner.
+    # step by step:
+    # 1) find the maximum value of occurences
+    # 2) get the index of it
+    # 3) since the indexes are same, find corresponding character in char_list
+    winner = char_list[occurences.index(max(occurences))]
+
+    print("\nThe most frequently occuring letter is", winner, "with", max(occurences), "occurences.")
             
 # call the main function
 main()
