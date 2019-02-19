@@ -1,12 +1,10 @@
-# most frequent character
+# string separator
 
 def main():
-    print("Example: StopAndSmellTheRoses")
-    user_string=input("Enter a string like one above: ")
-    
+    print("Example: StopAndSmellTheRoses\n")
+    user_string=input("Enter a string like one above: ")   
     separator(user_string)
    
-    
 def separator(string):
     # separate it by uppercase letter.
     # first letter would be capital
@@ -20,8 +18,8 @@ def separator(string):
             print(string[index].lower(), end="")
         else:
             print(string[index].lower(), end="")
-        index+=1
-        
+        index+=1   
     print(".")
+    
 # call the main function
 main()
