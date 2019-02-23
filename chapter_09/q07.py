@@ -1,5 +1,9 @@
 # world series winners
 
+# there was one line missing in the original
+# WorldSeriesWinners.txt
+# I added Toronto Blue Jays for year 1993
+
 def main():
     # read the WorldSeriesWinners.txt file.
     myfile=open("WorldSeriesWinners.txt", "r")
@@ -33,13 +37,14 @@ def main():
     keep_going="y"
     while keep_going=="y" or keep_going=="Y":
         year=int(input("Please enter a year: "))
-        if year>=1903 and year<=2008 and year!=1904 and year!=2009:
-            print("The winner that year is", winner_dict[year], "and it has won the cup", num_times_dict[winner_dict[year]])
-        elif year==1904 or year==2009:
+        if year>=1903 and year<=2008 and year!=1904 and year!=1994:
+            print("The winner that year is", winner_dict[year], "and it has won the cup", num_times_dict[winner_dict[year]], "times.")
+        elif year==1904 or year==1994:
             print("World series was not played in this year.") 
         else: 
             print("ERROR: Please enter a valid year between 1903 through 2008.")
-        keep_going=input("You want to continue? (y/n): ")       
+        keep_going=input("You want to continue? (y/n): ")
+        print()       
         
 # call the main function
 main()

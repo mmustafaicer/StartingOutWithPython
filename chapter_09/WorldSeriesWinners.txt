@@ -1,5 +1,5 @@
 Boston Americans
-None
+World Series Not Played in 1904
 New York Giants
 Chicago White Sox
 Chicago Cubs
@@ -87,8 +87,9 @@ Los Angeles Dodgers
 Oakland Athletics
 Cincinnati Reds
 Minnesota Twins
-None
 Toronto Blue Jays
+Toronto Blue Jays
+World Series Not Played in 1994
 Toronto Blue Jays
 Atlanta Braves
 New York Yankees
