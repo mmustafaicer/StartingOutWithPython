@@ -15,7 +15,7 @@ def main():
         emails={}
         
         # ask user to enter one registry
-        print("OOPSS! There is no file <<<name_email>>>. Lets create the file and enter one registry.")
+        print("OOPSS! There is no file <<<name_email.dat>>>. Lets create the file and enter one registry.")
         name=input("Enter a name: ").lower()
         emails[name]=input("Enter e-mail address: ")
         
@@ -26,7 +26,7 @@ def main():
         infile.close()
         print("File <<<name_email.dat>>> created.")
         
-        # rerun the progrma.
+        # rerun the program.
         main()
     else:
         # read the file for past records
@@ -101,7 +101,7 @@ def ReadFile(infile):
 def AddNewName(emails):
     # get the data and save it
     name = input("Please enter the name: ")
-    if name not in emails:
+    if name.lower() not in emails:
         emails[name.lower()] = input("E-mail: ")
         print("The registry for", name, "has been recorded.")
     else:
@@ -131,7 +131,7 @@ def Delete(emails):
 def ShowDataFor(emails):
     try:
         name = input("What is the name for you are looking for?: ")
-        print("Email address: ", emails[name].lower())
+        print("Email address: ", emails[name.lower()])
     except KeyError:
         print("The key", name, "is not found.")
         print()
