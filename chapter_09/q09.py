@@ -58,7 +58,7 @@ def deal_cards(deck):
         # deal the cards and accumulate their values.
         # player 1
         card, value=deck.popitem()
-        if card=="Ace of Spades 1" or card=="Ace of Hearts" or card=="Ace of Clubs" or card=="Ace of Diamonds":
+        if card=="Ace of Spades" or card=="Ace of Hearts" or card=="Ace of Clubs" or card=="Ace of Diamonds":
             if player_1+11<=21:
                 player_1+=11
                 player_1_cards.append(card)
@@ -67,7 +67,7 @@ def deal_cards(deck):
             player_1_cards.append(card)
         
         card, value=deck.popitem()
-        if card=="Ace of Spades 1" or card=="Ace of Hearts" or card=="Ace of Clubs" or card=="Ace of Diamonds":
+        if card=="Ace of Spades" or card=="Ace of Hearts" or card=="Ace of Clubs" or card=="Ace of Diamonds":
             if player_2+11<=21:
                 player_2+=11
                 player_2_cards.append(card)

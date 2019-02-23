@@ -59,7 +59,7 @@ def deal_cards(deck):
         # deal the cards and accumulate their values.
         # player 1
         card=random.choice(list(deck))
-        if card=="Ace of Spades 1" or card=="Ace of Hearts" or card=="Ace of Clubs" or card=="Ace of Diamonds":
+        if card=="Ace of Spades" or card=="Ace of Hearts" or card=="Ace of Clubs" or card=="Ace of Diamonds":
             if player_1+11<=21:
                 player_1+=11
                 player_1_cards.append(card)
@@ -70,7 +70,7 @@ def deal_cards(deck):
             del deck[card] 
         
         card=random.choice(list(deck))
-        if card=="Ace of Spades 1" or card=="Ace of Hearts" or card=="Ace of Clubs" or card=="Ace of Diamonds":
+        if card=="Ace of Spades" or card=="Ace of Hearts" or card=="Ace of Clubs" or card=="Ace of Diamonds":
             if player_2+11<=21:
                 player_2+=11
                 player_2_cards.append(card)
