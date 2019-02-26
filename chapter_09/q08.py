@@ -1,11 +1,11 @@
 # name and email addresses
 import pickle
-import os  # deleting and renaming files.
+import os  # for deleting and renaming files.
 
 def main():
     
     # if there is no registry or name_email.dat it will give an error.
-    # if there is not file create a new file, make at least one registry
+    # if there is not file, create a new file, make at least one registry
     # pickle it and close the file. Rerun the program.
     if not os.path.isfile("name_email.dat"):
         # open file for binary writing
@@ -15,7 +15,7 @@ def main():
         emails={}
         
         # ask user to enter one registry
-        print("OOPSS! There is no file <<<name_email.dat>>>. Lets create the file and enter one registry.")
+        print("OOPSS! There is no file <<<name_email>>>. Lets create the file and enter one registry.")
         name=input("Enter a name: ").lower()
         emails[name]=input("Enter e-mail address: ")
         
@@ -47,7 +47,7 @@ def main():
             print("------------------------------------")
             
             # set a flag if user has made changes or just view data
-            # if did not change there is no need to write the file.
+            # if did not change, there is no need to write the file.
             status=False
             
             # ask user for input
@@ -101,7 +101,7 @@ def ReadFile(infile):
 def AddNewName(emails):
     # get the data and save it
     name = input("Please enter the name: ")
-    if name.lower() not in emails:
+    if name not in emails:
         emails[name.lower()] = input("E-mail: ")
         print("The registry for", name, "has been recorded.")
     else:
@@ -120,7 +120,7 @@ def Change(emails):
 
 def Delete(emails):
     # ask user for the deletion.
-    name = input("What is the name you want to remove email address: : ")
+    name = input("What is the name you want to remove email address for: ")
     if name in emails:
         del emails[name.lower()]
         print("The registry for", name, "has been deleted.")
@@ -130,8 +130,8 @@ def Delete(emails):
 
 def ShowDataFor(emails):
     try:
-        name = input("What is the name for you are looking for?: ")
-        print("Email address: ", emails[name.lower()])
+        name = input("What is the name you are looking for?: ")
+        print("Email address: ", emails[name].lower())
     except KeyError:
         print("The key", name, "is not found.")
         print()

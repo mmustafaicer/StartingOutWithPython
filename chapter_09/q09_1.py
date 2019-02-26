@@ -99,9 +99,3 @@ def deal_cards(deck):
     
 # call the main function
 main()
-
-# -__-NOTE-__-: deck.popitem() is supposed to remove 
-# a key-value pair randomly from dictionary according to book.
-# but **** according to stackoverflow, it is arbitrary but not random
-# so if you enter same number again and again it will give the same result.
-# instead use random library.
