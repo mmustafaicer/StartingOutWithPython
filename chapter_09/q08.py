@@ -32,8 +32,9 @@ def main():
         # read the file for past records
         infile = open("name_email.dat", "rb")
         
-        
+        # read the original file and close it
         emails=ReadFile(infile)
+        infile.close()
         
         again = "y"  # to control the loop repetition
         # control the loop if the user wants to again
@@ -75,7 +76,6 @@ def main():
         newfile = open("temp.dat", "wb")
         if status:                      # if changes has made, then write it. otherwise dont.
             pickle.dump(new_dict, newfile)
-            infile.close()
             newfile.close()
             # delete the original file.
             os.remove("name_email.dat")
@@ -101,7 +101,7 @@ def ReadFile(infile):
 def AddNewName(emails):
     # get the data and save it
     name = input("Please enter the name: ")
-    if name not in emails:
+    if name.lower() not in emails:
         emails[name.lower()] = input("E-mail: ")
         print("The registry for", name, "has been recorded.")
     else:
@@ -111,7 +111,7 @@ def AddNewName(emails):
 def Change(emails):
     # ask user for the change.
     name = input("What is the name you want to change email address: : ")
-    if name in emails:
+    if name.lower() in emails:
         emails[name.lower()] = input("Enter new e-mail: ")
         print("The registry for", name, "has been updated.")
     else:
@@ -121,7 +121,7 @@ def Change(emails):
 def Delete(emails):
     # ask user for the deletion.
     name = input("What is the name you want to remove email address for: ")
-    if name in emails:
+    if name.lower() in emails:
         del emails[name.lower()]
         print("The registry for", name, "has been deleted.")
     else:
@@ -131,7 +131,7 @@ def Delete(emails):
 def ShowDataFor(emails):
     try:
         name = input("What is the name you are looking for?: ")
-        print("Email address: ", emails[name].lower())
+        print("Email address: ", emails[name.lower()])
     except KeyError:
         print("The key", name, "is not found.")
         print()
