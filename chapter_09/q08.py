@@ -82,6 +82,9 @@ def main():
 
             # rename the new file.
             os.rename("temp.dat", "name_email.dat")
+            
+            # also remove the temp file.
+            os.remove("temp.dat")
         
             print("The file has been saved.")
         infile.close()
