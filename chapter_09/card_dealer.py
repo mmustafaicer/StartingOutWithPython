@@ -70,3 +70,10 @@ main()
 # but **** according to stackoverflow, it is arbitrary but not random
 # so if you enter same number again and again it will give the same result.
 # instead use random library.
+
+ # deal the cards and accumulate their values.
+ #   for count in range(number):
+ #       card_name = random.choice(list(deck.keys()))
+ #       value=deck.pop(card_name)
+ #       print(card_name)
+ #       hand_value+=value
