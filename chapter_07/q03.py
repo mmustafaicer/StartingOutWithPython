@@ -19,7 +19,7 @@ def main():
     print(rainfall_monthly.index(min(rainfall_monthly))+1)
     
     # get the maximum.
-    print("The minimum rainfall was", max(rainfall_monthly), "in the month #", end="")
+    print("The maximum rainfall was", max(rainfall_monthly), "in the month #", end="")
     print(rainfall_monthly.index(max(rainfall_monthly))+1)
     
 def get_rainfall():
